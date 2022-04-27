@@ -4,7 +4,7 @@
 > php 8.0
 
 ```
-composer create-project dybee/pageseed
+composer require dybee/pageseed
 ```
 
 # Add dependencies
