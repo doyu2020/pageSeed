@@ -15,7 +15,6 @@ class Render extends HyperfRender
 
     public function render(string $template, array $data = []): ResponseInterface
     {
-        $this->marks();
         $html = $this->getContents($template, $data);
         if (isset($this->config['pageSeed']['enable']) && $this->config['pageSeed']['enable']) {
             foreach ($this->config['pageSeed']['option'] as $option) {
@@ -31,7 +30,7 @@ class Render extends HyperfRender
      * set a mark for httpTemplate
      * @return void
      */
-    private function marks(): void
+    public static function mark(): void
     {
         Context::set(self::MARK_NAME, true);
     }
