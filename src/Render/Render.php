@@ -22,7 +22,7 @@ class Render extends HyperfRender
             }
         }
         return $this->response()
-            ->withAddedHeader('content-type', $this->getContentType())
+            ->withHeader('content-type', $this->getContentType())
             ->withBody(new SwooleStream($html));
     }
 
